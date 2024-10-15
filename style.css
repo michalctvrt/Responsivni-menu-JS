@@ -1,0 +1,113 @@
+:root {
+  --header_bg: #401f71;
+  --title: #824d74;
+  --logo_bg: #be7b72;
+  --nav: #fdaf7b;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+body {
+  background: rgb(11, 0, 26) 95%;
+  background: linear-gradient(300deg, rgb(66, 21, 54) 2%, rgb(11, 0, 26) 95%);
+  min-height: calc(100vh - 0px);
+  background-size: cover;
+  background-position: center;
+}
+
+header {
+  margin: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: stretch;
+  align-items: center;
+  height: 100px;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0)
+  );
+  backdrop-filter: blue(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.17);
+}
+.logo {
+  flex-grow: 1;
+}
+.logo img {
+  width: 200px;
+  margin-left: 30px;
+  transition: all 0.3s;
+}
+.logo img:hover {
+  scale: 1.1;
+}
+.nav {
+  margin-right: 10px;
+}
+.nav ul {
+  margin-right: 10px;
+}
+.nav li {
+  display: inline-block;
+  list-style-type: none;
+  margin-right: 20px;
+  text-transform: uppercase;
+}
+.nav a {
+  text-decoration: none;
+  color: var(--logo_bg);
+
+  font-size: 18px;
+  position: relative;
+}
+.nav a:after {
+  content: "";
+  position: absolute;
+  background-color: var(--title);
+  height: 2px;
+  width: 0;
+  left: 0;
+  bottom: -10px;
+  transition: 0.5s;
+}
+.nav a:hover:after {
+  width: 100%;
+}
+.menu_icon {
+  margin-right: 30px;
+  display: none;
+}
+.container {
+  position: relative;
+  justify-content: center;
+  width: 60%;
+  display: flex;
+  background-color: #ebe2e83d;
+  padding: 50px 10px;
+  border-radius: 15px;
+  gap: 45px;
+  margin: 100px auto;
+}
+.welcome_title {
+  position: relative;
+  color: var(--logo_bg);
+  font-size: 2.5rem;
+  width: 40%;
+  text-align: right;
+  margin: auto;
+  overflow-wrap: anywhere;
+}
+.welcome_text {
+  position: relative;
+  color: white;
+  width: 40%;
+  text-align: left;
+  margin: auto;
+}

@@ -1,0 +1,60 @@
+:root {
+  --header_bg: #401f71;
+  --title: #824d74;
+  --logo_bg: #be7b72;
+  --nav: #fdaf7b;
+}
+@media (max-width: 900px) {
+  .container,
+  .welcome_title,
+  .welcome_text {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 35px;
+    text-align: left;
+  }
+  header {
+    position: relative;
+  }
+  .nav {
+    position: absolute;
+    top: 150px;
+    background-color: var(#be7b72);
+    width: 100%;
+    display: none;
+  }
+  .menu_icon {
+    display: block;
+    font-size: 23px;
+    color: var(--nav);
+  }
+
+  .nav li {
+    display: block;
+    text-align: center;
+    margin: 10px 0;
+  }
+  .nav ul {
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.03),
+      rgba(255, 255, 255, 0)
+    );
+    backdrop-filter: blue(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.17);
+    width: 50%;
+    margin: auto;
+  }
+}
+@media (min-width: 901px) {
+  .nav {
+    display: block !important;
+  }
+  .container {
+    margin: 35px auto !important;
+  }
+}
